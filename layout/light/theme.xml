@@ -1,0 +1,297 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Theme: Slate ES-X
+version: 0.1
+author: Reneto
+license: CC-BY-NC-SA
+-->
+
+<theme>
+	<formatVersion>6</formatVersion>
+	<resolution>1920 1080</resolution>
+
+	<!-- =========================
+	     SYSTEM VIEW
+	     ========================= -->
+	<view name="system">
+
+		<image name="background" extra="true">
+			<path>./layout/light/wallpaper_system.png</path>
+			<size>1920 1080</size>
+			<pos>0 0</pos>
+			<origin>0 0</origin>
+		</image>
+
+		<image name="logo">
+			<path>./_inc/logos/${system.theme}.svg</path>
+			<maxSize>900 280</maxSize>
+			<pos>960 260</pos>
+			<origin>0.5 0.5</origin>
+		</image>
+
+		<!-- Consola: arriba-izquierda -->
+		<image name="console" extra="true">
+			<path>./_inc/consoles/${system.theme}.svg</path>
+			<pos>40 40</pos>
+			<origin>0 0</origin>
+			<maxSize>520 260</maxSize>
+		</image>
+
+		<!-- Control: arriba-derecha -->
+		<image name="controller" extra="true">
+			<path>./_inc/controller/${system.theme}.svg</path>
+			<pos>1470 40</pos>
+			<origin>1 0</origin>
+			<maxSize>520 260</maxSize>
+		</image>
+
+		<helpsystem name="help">
+			<iconColor>7d7d7d</iconColor>
+			<textColor>7d7d7d</textColor>
+		</helpsystem>
+
+	</view>
+
+	<feature supported="navigationsounds">
+		<view name="all">
+			<sound name="systembrowse">
+				<path>./_inc/audio/systembrowse.wav</path>
+			</sound>
+			<sound name="quicksysselect">
+				<path>./_inc/audio/quicksysselect.wav</path>
+			</sound>
+			<sound name="select">
+				<path>./_inc/audio/select.wav</path>
+			</sound>
+			<sound name="back">
+				<path>./_inc/audio/back.wav</path>
+			</sound>
+			<sound name="scroll">
+				<path>./_inc/audio/scroll.wav</path>
+			</sound>
+			<sound name="favorite">
+				<path>./_inc/audio/favorite.wav</path>
+			</sound>
+			<sound name="launch">
+				<path>./_inc/audio/launch.wav</path>
+			</sound>
+		</view>
+	</feature>
+
+	<!-- =========================
+	     COMMON (ALL GAMELISTS)
+	     ========================= -->
+	<view name="basic, detailed, video, grid, automatic">
+
+		<image name="background" extra="true">
+			<path>./layout/light/wallpaper_gamelist.png</path>
+			<size>1920 1080</size>
+			<pos>0 0</pos>
+			<origin>0 0</origin>
+		</image>
+
+		<image name="logo">
+			<path>./_inc/logos/${system.theme}.svg</path>
+			<maxSize>520 120</maxSize>
+			<pos>40 40</pos>
+			<origin>0 0</origin>
+		</image>
+
+	</view>
+
+	<!-- =========================
+	     BASIC (LISTA SIMPLE)
+	     ========================= -->
+	<view name="basic">
+
+		<textlist name="gamelist">
+			<fontSize>32</fontSize>
+			<forceUppercase>false</forceUppercase>
+			<size>820 840</size>
+			<pos>40 180</pos>
+			<alignment>left</alignment>
+			<horizontalMargin>20</horizontalMargin>
+
+			<selectorColor>00000040</selectorColor>
+			<selectedColor>3082ce</selectedColor>
+
+			<!-- TEXTOS (antes blanco): ahora gris oscuro -->
+			<primaryColor>1A1A1ACC</primaryColor>
+			<secondaryColor>1A1A1A99</secondaryColor>
+		</textlist>
+
+	</view>
+
+	<!-- =========================
+	     DETAILED
+	     ========================= -->
+	<view name="detailed">
+
+		<textlist name="gamelist">
+			<fontSize>32</fontSize>
+			<forceUppercase>false</forceUppercase>
+			<size>820 840</size>
+			<pos>40 180</pos>
+			<alignment>left</alignment>
+			<horizontalMargin>20</horizontalMargin>
+
+			<selectorColor>00000040</selectorColor>
+			<selectedColor>3082ce</selectedColor>
+
+			<!-- TEXTOS (antes blanco): ahora gris oscuro -->
+			<primaryColor>1A1A1ACC</primaryColor>
+			<secondaryColor>1A1A1A99</secondaryColor>
+		</textlist>
+
+		<!-- Imagen única (más compatible) -->
+		<image name="md_image">
+			<pos>920 220</pos>
+			<maxSize>960 500</maxSize>
+			<origin>0 0</origin>
+			<visible>true</visible>
+		</image>
+
+		<!-- Evita duplicados -->
+		<image name="md_thumbnail">
+			<visible>false</visible>
+		</image>
+
+		<text name="md_description">
+			<fontSize>22</fontSize>
+			<size>960 240</size>
+			<pos>920 740</pos>
+
+			<!-- TEXTO (antes blanco): ahora gris oscuro -->
+			<color>1A1A1ACC</color>
+
+			<visible>true</visible>
+		</text>
+
+	</view>
+
+	<!-- =========================
+	     AUTOMATIC (alias de detailed)
+	     ========================= -->
+	<view name="automatic">
+
+		<textlist name="gamelist">
+			<fontSize>32</fontSize>
+			<forceUppercase>false</forceUppercase>
+			<size>820 840</size>
+			<pos>40 180</pos>
+			<alignment>left</alignment>
+			<horizontalMargin>20</horizontalMargin>
+
+			<selectorColor>00000040</selectorColor>
+			<selectedColor>3082ce</selectedColor>
+
+			<!-- TEXTOS (antes blanco): ahora gris oscuro -->
+			<primaryColor>1A1A1ACC</primaryColor>
+			<secondaryColor>1A1A1A99</secondaryColor>
+		</textlist>
+
+		<image name="md_image">
+			<pos>920 220</pos>
+			<maxSize>960 500</maxSize>
+			<origin>0 0</origin>
+			<visible>true</visible>
+		</image>
+
+		<image name="md_thumbnail">
+			<visible>false</visible>
+		</image>
+
+		<text name="md_description">
+			<fontSize>22</fontSize>
+			<size>960 240</size>
+			<pos>920 740</pos>
+
+			<!-- TEXTO (antes blanco): ahora gris oscuro -->
+			<color>1A1A1ACC</color>
+
+			<visible>true</visible>
+		</text>
+
+	</view>
+
+	<!-- =========================
+	     VIDEO
+	     ========================= -->
+	<view name="video">
+
+		<textlist name="gamelist">
+			<fontSize>32</fontSize>
+			<forceUppercase>false</forceUppercase>
+			<size>820 840</size>
+			<pos>40 180</pos>
+			<alignment>left</alignment>
+			<horizontalMargin>20</horizontalMargin>
+
+			<selectorColor>00000040</selectorColor>
+			<selectedColor>3082ce</selectedColor>
+
+			<!-- TEXTOS (antes blanco): ahora gris oscuro -->
+			<primaryColor>1A1A1ACC</primaryColor>
+			<secondaryColor>1A1A1A99</secondaryColor>
+		</textlist>
+
+		<video name="md_video">
+			<maxSize>960 500</maxSize>
+			<pos>1400 470</pos>
+			<origin>0.5 0.5</origin>
+			<delay>3</delay>
+			<showSnapshotNoVideo>true</showSnapshotNoVideo>
+			<showSnapshotDelay>true</showSnapshotDelay>
+			<visible>true</visible>
+		</video>
+
+		<text name="md_description">
+			<fontSize>22</fontSize>
+			<size>960 240</size>
+			<pos>920 740</pos>
+
+			<!-- TEXTO (antes blanco): ahora gris oscuro -->
+			<color>1A1A1ACC</color>
+
+			<visible>true</visible>
+		</text>
+
+	</view>
+
+	<!-- =========================
+	     GRID
+	     ========================= -->
+	<view name="grid">
+
+		<image name="background" extra="true">
+			<!-- corregido: antes estaba ./_inc/layout/light/... -->
+			<path>./layout/light/wallpaper_gamelist.png</path>
+			<size>1920 1080</size>
+			<pos>0 0</pos>
+			<origin>0 0</origin>
+		</image>
+
+		<imagegrid name="gamegrid">
+			<size>1800 840</size>
+			<pos>60 180</pos>
+			<margin>20 20</margin>
+			<scrollDirection>vertical</scrollDirection>
+		</imagegrid>
+
+		<gridtile name="default">
+			<size>320 262</size>
+			<padding>20 20</padding>
+			<imageColor>FFFFFF88</imageColor>
+			<backgroundColor>00000000</backgroundColor>
+		</gridtile>
+
+		<gridtile name="selected">
+			<size>320 262</size>
+			<padding>0 0</padding>
+			<imageColor>FFFFFFFF</imageColor>
+			<backgroundColor>00000000</backgroundColor>
+		</gridtile>
+
+	</view>
+
+</theme>

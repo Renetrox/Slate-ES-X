@@ -1,0 +1,290 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Theme: Slate ES-X (System Vertical + Gamelists) - SIMPLE
+version: 0.1
+author: Reneto
+license: CC-BY-NC-SA
+-->
+
+<theme>
+  <formatVersion>4</formatVersion>
+
+  <!-- =========================================================
+       SYSTEM VIEW (VERTICAL)
+       ========================================================= -->
+  <view name="system">
+
+    <!-- Fondo -->
+    <image name="background" extra="true">
+      <!-- FIX: evitá espacios en carpeta -->
+      <path>./layout/vertical light/wallpaper_system_vertical.png</path>
+      <origin>0 0</origin>
+      <pos>0 0</pos>
+      <size>1 1</size>
+    </image>
+
+    <!-- Control arriba derecha -->
+    <image name="controller" extra="true">
+      <origin>1 0</origin>
+      <pos>0.79 0.03</pos>
+      <maxSize>0.18 0.18</maxSize>
+      <path>./_inc/controller/${system.theme}.svg</path>
+    </image>
+
+    <!-- Consola grande central -->
+    <image name="console_big" extra="true">
+      <origin>0.5 0.5</origin>
+      <pos>0.60 0.62</pos>
+      <maxSize>0.30 0.46</maxSize>
+      <path>./_inc/consoles/${system.theme}.svg</path>
+    </image>
+
+    <!-- Logo del sistema seleccionado -->
+    <image name="logo">
+      <origin>0 0.5</origin>
+      <pos>0.33 0.45</pos>
+      <maxSize>0.42 0.18</maxSize>
+      <path>./_inc/logos/${system.theme}.svg</path>
+    </image>
+
+    <!-- Contador (systemInfo ya existe en ES/ES-X) -->
+    <text name="systemInfo">
+      <origin>0.5 0</origin>
+      <pos>0.60 0.84</pos>
+      <backgroundColor>00000000</backgroundColor>
+
+      <!-- FIX: antes blanco -->
+      <color>1A1A1ACC</color>
+
+      <fontSize>0.028</fontSize>
+      <alignment>center</alignment>
+    </text>
+
+    <helpsystem name="help">
+      <textColor>7D7D7D</textColor>
+      <iconColor>7D7D7D</iconColor>
+    </helpsystem>
+
+  </view>
+
+  <!-- Carrusel vertical del SystemView -->
+  <feature supported="carousel">
+    <view name="system">
+      <carousel name="systemcarousel">
+        <type>vertical</type>
+
+        <!-- Columna izquierda -->
+        <origin>0 0</origin>
+        <pos>0.03 0.02</pos>
+        <size>0.28 0.92</size>
+
+        <logoAlignment>top</logoAlignment>
+        <maxLogoCount>7</maxLogoCount>
+        <color>00000000</color>
+
+        <logoSize>0.24 0.08</logoSize>
+        <logoScale>1.0</logoScale>
+        <minLogoOpacity>0.8</minLogoOpacity>
+        <scaledLogoSpacing>2</scaledLogoSpacing>
+      </carousel>
+    </view>
+  </feature>
+
+  <feature supported="navigationsounds">
+    <view name="all">
+      <sound name="systembrowse">
+        <path>./_inc/audio/systembrowse.wav</path>
+      </sound>
+      <sound name="quicksysselect">
+        <path>./_inc/audio/quicksysselect.wav</path>
+      </sound>
+      <sound name="select">
+        <path>./_inc/audio/select.wav</path>
+      </sound>
+      <sound name="back">
+        <path>./_inc/audio/back.wav</path>
+      </sound>
+      <sound name="scroll">
+        <path>./_inc/audio/scroll.wav</path>
+      </sound>
+      <sound name="favorite">
+        <path>./_inc/audio/favorite.wav</path>
+      </sound>
+      <sound name="launch">
+        <path>./_inc/audio/launch.wav</path>
+      </sound>
+    </view>
+  </feature>
+
+  <!-- =========================================================
+       COMMON (ALL GAMELISTS)
+       ========================================================= -->
+  <view name="basic, detailed, video, grid, automatic">
+
+    <image name="background" extra="true">
+      <path>./layout/light/wallpaper_gamelist.png</path>
+      <origin>0 0</origin>
+      <pos>0 0</pos>
+      <size>1 1</size>
+    </image>
+
+    <image name="logo">
+      <origin>0 0</origin>
+      <pos>0.02 0.03</pos>
+      <maxSize>0.28 0.10</maxSize>
+      <path>./_inc/logos/${system.theme}.svg</path>
+    </image>
+
+    <helpsystem name="help">
+      <textColor>7D7D7D</textColor>
+      <iconColor>7D7D7D</iconColor>
+    </helpsystem>
+
+  </view>
+
+  <!-- =========================================================
+       BASIC
+       ========================================================= -->
+  <view name="basic">
+    <textlist name="gamelist">
+      <fontSize>0.035</fontSize>
+      <forceUppercase>false</forceUppercase>
+
+      <pos>0.03 0.16</pos>
+      <size>0.46 0.80</size>
+
+      <alignment>left</alignment>
+      <horizontalMargin>0.01</horizontalMargin>
+
+      <selectorColor>00000040</selectorColor>
+      <selectedColor>3082CE</selectedColor>
+
+      <!-- FIX: antes blanco -->
+      <primaryColor>1A1A1ACC</primaryColor>
+      <secondaryColor>1A1A1A99</secondaryColor>
+    </textlist>
+  </view>
+
+  <!-- =========================================================
+       DETAILED
+       ========================================================= -->
+  <view name="detailed">
+
+    <textlist name="gamelist">
+      <fontSize>0.035</fontSize>
+      <forceUppercase>false</forceUppercase>
+
+      <pos>0.03 0.16</pos>
+      <size>0.46 0.80</size>
+
+      <alignment>left</alignment>
+      <horizontalMargin>0.01</horizontalMargin>
+
+      <selectorColor>00000040</selectorColor>
+      <selectedColor>3082CE</selectedColor>
+
+      <!-- FIX: antes blanco -->
+      <primaryColor>1A1A1ACC</primaryColor>
+      <secondaryColor>1A1A1A99</secondaryColor>
+    </textlist>
+
+    <!-- Media: usá SOLO una para evitar duplicados -->
+    <image name="md_image">
+      <origin>0 0</origin>
+      <pos>0.52 0.20</pos>
+      <maxSize>0.45 0.45</maxSize>
+      <visible>true</visible>
+    </image>
+
+    <image name="md_thumbnail">
+      <visible>false</visible>
+    </image>
+
+    <text name="md_description">
+      <fontSize>0.022</fontSize>
+      <pos>0.52 0.68</pos>
+      <size>0.45 0.26</size>
+
+      <!-- FIX: antes blanco -->
+      <color>1A1A1ACC</color>
+
+      <visible>true</visible>
+    </text>
+
+  </view>
+
+  <!-- =========================================================
+       VIDEO
+       ========================================================= -->
+  <view name="video">
+
+    <textlist name="gamelist">
+      <fontSize>0.035</fontSize>
+      <forceUppercase>false</forceUppercase>
+
+      <pos>0.03 0.16</pos>
+      <size>0.46 0.80</size>
+
+      <alignment>left</alignment>
+      <horizontalMargin>0.01</horizontalMargin>
+
+      <selectorColor>00000040</selectorColor>
+      <selectedColor>3082CE</selectedColor>
+
+      <!-- FIX: antes blanco -->
+      <primaryColor>1A1A1ACC</primaryColor>
+      <secondaryColor>1A1A1A99</secondaryColor>
+    </textlist>
+
+    <video name="md_video">
+      <origin>0 0</origin>
+      <pos>0.52 0.20</pos>
+      <maxSize>0.45 0.45</maxSize>
+      <delay>3</delay>
+      <showSnapshotNoVideo>true</showSnapshotNoVideo>
+      <showSnapshotDelay>true</showSnapshotDelay>
+      <visible>true</visible>
+    </video>
+
+    <text name="md_description">
+      <fontSize>0.022</fontSize>
+      <pos>0.52 0.68</pos>
+      <size>0.45 0.26</size>
+
+      <!-- FIX: antes blanco -->
+      <color>1A1A1ACC</color>
+
+      <visible>true</visible>
+    </text>
+
+  </view>
+
+  <!-- =========================================================
+       GRID
+       ========================================================= -->
+  <view name="grid">
+
+    <imagegrid name="gamegrid">
+      <pos>0.03 0.16</pos>
+      <size>0.94 0.80</size>
+      <margin>0.01 0.01</margin>
+      <scrollDirection>vertical</scrollDirection>
+    </imagegrid>
+
+    <gridtile name="default">
+      <size>0.16 0.16</size>
+      <padding>0.01 0.01</padding>
+      <imageColor>FFFFFF88</imageColor>
+      <backgroundColor>00000000</backgroundColor>
+    </gridtile>
+
+    <gridtile name="selected">
+      <size>0.16 0.16</size>
+      <padding>0 0</padding>
+      <imageColor>FFFFFFFF</imageColor>
+      <backgroundColor>00000000</backgroundColor>
+    </gridtile>
+
+  </view>
+
+</theme>
